@@ -39,6 +39,8 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -54,3 +56,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap', '~> 4.0.0.alpha6'
+gem "rspec-rails", :group => [:development, :test]
