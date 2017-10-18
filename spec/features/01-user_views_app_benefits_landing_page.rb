@@ -12,6 +12,9 @@ feature 'user views app features and benefits' do
   #User able to see a clickable sign up button
 
   scenario 'user visits landing page' do
+    visit root_path
+    
+    expect(page).to have_content('+1 Goals)
 
   end
 
@@ -20,6 +23,6 @@ feature 'user views app features and benefits' do
   end
 
   scenario 'user sees clickable sign up button' do
-    
+
   end
 end
