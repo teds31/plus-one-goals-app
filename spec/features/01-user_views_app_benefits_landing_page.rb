@@ -21,7 +21,7 @@ feature 'user views app features and benefits' do
   scenario 'user sees featurs and benefits'
     visit root_path
 
-    expect(page).to have_content('Plan,Track, And Achieve Your Goals Based On Proven Science!')
+    expect(page).to have_content('Plan,Track, And Achieve Your Goals Based On Proven Science')
     expect(page).to have_content('Plan Each Step Like A Domino')
     expect(page).to have_content('Each Finished Task Is A +1')
     expect(page).to have_content("Add Up All The +1's And Achieve Success")
