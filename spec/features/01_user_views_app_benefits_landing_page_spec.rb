@@ -13,6 +13,7 @@ feature 'user views app features and benefits' do
 
   scenario 'user visits landing page' do
     visit root_path
+    save_and_open_page
 
     expect(page).to have_content('+1 Goals')
 
