@@ -18,13 +18,15 @@ feature 'user views app features and benefits' do
 
   end
 
-  scenario 'user sees featurs and benefits'
+  scenario 'user sees featurs and benefits' do
     visit root_path
+    save_and_open_page
 
-    expect(page).to have_content('Plan,Track, And Achieve Your Goals Based On Proven Science')
-    expect(page).to have_content('Plan Each Step Like A Domino')
-    expect(page).to have_content('Each Finished Task Is A +1')
-    expect(page).to have_content("Add Up All The +1's And Achieve Success")
+    expect(page).to have_content('Plan, Track And Achieve Your Goals Based On Proven Science')
+    expect(page).to have_content('Plan With The End In Mind')
+    expect(page).to have_content('+1 When Complete A Task')
+    expect(page).to have_content('Success When You Add It All Up')
+
   end
 
   scenario 'user sees clickable sign up button' do
@@ -32,4 +34,5 @@ feature 'user views app features and benefits' do
 
     expect(page).to have_content('Sign Up')
   end
+
 end
