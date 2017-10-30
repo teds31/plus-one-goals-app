@@ -13,14 +13,8 @@ feature 'user views app features and benefits' do
 
   scenario 'user visits landing page' do
     visit root_path
-    save_and_open_page
 
     expect(page).to have_content('+1 Goals')
-
-  end
-
-  scenario 'user sees logo' do
-    expect(page).to have_xpath("//img[contains(@src,'+1logo.png')]")
   end
 
   scenario 'user sees featurs and benefits' do
@@ -29,9 +23,8 @@ feature 'user views app features and benefits' do
 
     expect(page).to have_content('Plan, Track And Achieve')
     expect(page).to have_content('Plan With The End In Mind')
-    expect(page).to have_content('+1 When Complete A Task')
+    expect(page).to have_content('+1 Every Task Completed')
     expect(page).to have_content('Success When You Add It All Up')
-
   end
 
   scenario 'user sees clickable sign up button' do

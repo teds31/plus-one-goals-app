@@ -2,30 +2,56 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+div.logo {
+  align-content: center;
+  padding-bottom: 15px;
+}
 div.jumbotron {
-  text-align: center;
   background-color: #1E90FF;
   color: #ffffff;
-  padding: 100px 25px;
+  text-align: center;
+  align-items: center;
+  padding: 30px 10px;
 }
 
 div.about {
   text-align: center;
+  width: 800px;
   margin: auto;
-  padding: 30px 10px;
 }
 
 div.features {
   text-align: center;
+  background-color: #1E90FF;
+  color: #ffffff;
   padding: 30px 10px;
+  margin: auto;
+  align-items: center;
 }
 
-
 div.feature_box {
+  width: 1300px;
+  margin: auto;
+  align-items: center;
+  padding: 25px;
 
+}
+
+div.icon {
+  margin: auto;
+  align-content: center;
+  padding: 5px, 5px;
+}
+
+div.col-sm-4 {
+  border-color: #1E90FF;
+  padding: 30px 20px;
+  align-content: center;
 }
 
 div.signup_button {
   align-items: center;
+  align-content: center;
+  margin: auto;
+  color: #1E90FF;
 }

@@ -1,15 +1,15 @@
+
 <div class='jumbotron'>
   <div class="logo">
-    <%= image_tag "logos/+1logo.png" %>
+    <%= image_tag("logos/plusonegoalslogo.png", :alt => "+1 Logo") %>
   </div>
-
-  <h1>+1 Goals</h1>
-  <h4>Plan, Track And Achieve</h4>
+  <h3>Plan, Track And Achieve</h3>
 </div>
 
 <div class="about">
   <h3>Goals are easy to start, hard to maintain. According to the University of Scranton,
-    92% of people say they never reach their New Year's goals. So we looked at works,
+    92% of people say they never reach their New Year's goals.</h3>
+  <h3>So we looked at works,
     and what doesn't work and created an app that uses the latest research
     in achieving success.</h3>
 </div>
@@ -23,23 +23,36 @@
 </div>
 
 <div class='feature_box'>
-  <h3>Plan With The End In Mind</h3>
-  <p>With every goal you set, we use backwards planning.</p>
-  <p>We break down each step required and create a task.</p>
-  <p>Easily add that task to your daily to-do list app or calendar.</p>
-</div>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="icon">
+        <%= image_tag("icons/plan.png") %>
+      </div>
+      <h3>Plan With The End In Mind</h3>
+      <p><%= image_tag("icons/checkmark.png") %>  With every goal you set, we use backwards planning.</p>
+      <p><%= image_tag("icons/checkmark.png") %>  We break down each step required and create a task.</p>
+      <p><%= image_tag("icons/checkmark.png") %>  Easily add that task to your daily to-do list app or calendar.</p>
+    </div>
 
-<div class='feature_box'>
-  <h3>+1 When Complete A Task</h3>
-  <p>The objective is to get as many +1's you can each day.</p>
-  <p>Break down tasks into subtasks so you know exactly what you need to accomplish.</p>
-  <p>Keep track of your progress with ease and know exactly what you have to do next.</p>
-</div>
+    <div class="col-sm-4">
+      <div class="icon">
+        <%= image_tag("icons/target.png") %>
+      </div>
+      <h3>+1 Every Task Completed</h3>
+      <p><%= image_tag("icons/checkmark.png") %>  The objective is to get as many +1's you can each day.</p>
+      <p><%= image_tag("icons/checkmark.png") %>  Break down tasks into subtasks so you know exactly what you need to accomplish.</p>
+      <p><%= image_tag("icons/checkmark.png") %>  Keep track of your progress with ease and know exactly what you have to do next.</p>
+    </div>
 
-<div class='feature_box'>
-  <h3>Success When You Add It All Up</h3>
-  <p>The name of the game is to get as many +1's as you can each day.</p>
-  <p>When you add up all the +1's, that's when you reached your goal.</p>
+    <div class="col-sm-4">
+      <div class="icon">
+        <%= image_tag("icons/graph.png") %>
+      </div>
+      <h3>Success When You Add It All Up</h3>
+      <p><%= image_tag("icons/checkmark.png") %>  The name of the game is to get as many +1's as you can each day.</p>
+      <p><%= image_tag("icons/checkmark.png") %>  When you add up all the +1's, that's when you reached your goal.</p>
+    </div>
+  </div>
 </div>
 
 <div class='signup_button'>
