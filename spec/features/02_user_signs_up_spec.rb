@@ -18,11 +18,12 @@ feature 'new user signs up' do
   end
 
   scenario 'user enters email and password in form' do
+    visit root_path
 
   end
 
   scenario 'account created and user is taken dashboard' do
-    
+
   end
 
 end
