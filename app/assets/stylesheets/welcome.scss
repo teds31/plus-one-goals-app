@@ -1,12 +1,31 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import "welcome";
 
-.feature_box {
+
+div.jumbotron {
+  text-align: center;
+  background-color: #1E90FF;
+  color: #ffffff;
+  padding: 100px 25px;
+}
+
+div.about {
+  text-align: center;
+  margin: auto;
+  padding: 30px 10px;
+}
+
+div.features {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+
+div.feature_box {
 
 }
 
-.signup_button {
-  margin: auto;
+div.signup_button {
+  align-items: center;
 }
