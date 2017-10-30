@@ -19,7 +19,6 @@ feature 'user views app features and benefits' do
 
   scenario 'user sees featurs and benefits' do
     visit root_path
-    save_and_open_page
 
     expect(page).to have_content('Plan, Track And Achieve')
     expect(page).to have_content('Plan With The End In Mind')
