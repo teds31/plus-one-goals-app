@@ -29,7 +29,7 @@ feature 'user views app features and benefits' do
   scenario 'user sees clickable sign up button' do
     visit root_path
 
-    expect(page).to have_content('SIGN UP')
+    expect(page).to have_content('Sign Up')
   end
 
 end
