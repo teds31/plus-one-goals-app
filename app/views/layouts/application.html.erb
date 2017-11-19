@@ -18,6 +18,8 @@
       <% else %>
         <%= link_to 'Dashboard', goals_path %>
         <%= link_to 'My Account', '#' %>
+        <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+        <%= link_to 'Contact', '#' %>
       <% end %>
     </nav>
 
@@ -39,6 +41,7 @@
       <% else %>
         <%= link_to 'Dashboard', goals_path %>
         <%= link_to 'My Account', '#' %>
+        <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
         <%= link_to 'Contact', '#' %>
       <% end %>
     </nav>
