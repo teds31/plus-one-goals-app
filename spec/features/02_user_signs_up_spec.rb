@@ -14,7 +14,7 @@ feature 'new user signs up' do
 
   scenario 'user clicks on sign up button' do
     visit root_path
-    click_button 'Sign Up'
+    click_link 'Sign Up'
 
     expect(page). to have_content("Create Your Account")
   end
@@ -29,7 +29,7 @@ feature 'new user signs up' do
     fill_in 'Password', with: 'password1'
     fill_in 'Password confirmation', with: 'password1'
     click_button 'Create Account'
-
+ 
     expect(page).to have_content("Welcome To Your Dashboard")
   end
 
