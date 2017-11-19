@@ -20,7 +20,7 @@ feature 'sign in' do
 
     fill_in 'Email', with: user.email
     fill_in 'Password', with: user.password
-    click_button 'Log in'
+    click_button 'Sign In'
 
     expect(page).to have_content("Sign Out")
   end
@@ -31,7 +31,7 @@ feature 'sign in' do
 
     fill_in 'Email', with: 'nobody@home.com'
     fill_in 'Password', with: 'somepassword1'
-    click_button 'Log in'
+    click_button 'Sign In'
 
     expect(page).to have_content("Invalid email or password.")
     expect(page).to_not have_content("Sign Out")
@@ -44,7 +44,7 @@ feature 'sign in' do
 
     fill_in 'Email', with: user.email
     fill_in 'Password', with: 'whatever'
-    click_button 'Log in'
+    click_button 'Sign In'
 
     expect(page).to have_content("Invalid email or password.")
     expect(page).to_not have_content('Sign Out')
