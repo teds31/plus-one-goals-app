@@ -16,35 +16,46 @@ feature 'user changes password on account' do
     user = FactoryBot.create(:user)
     visit root_path
     click_link 'Sign In'
+    fill_in 'Email', with: user.email
+    fill_in 'Password', with: user.password
+    click_button 'Sign In'
     click_link 'My Account'
 
-    expect(page).to have_content(user.first_name)
-    expecet(page).to have_content(user.last_name)
+    expect(find_field('First name').value).to eq user.first_name
+    expect(find_field('Last name').value).to eq user.last_name
   end
 
   scenario 'user changes password' do
     user = FactoryBot.create(:user)
     visit root_path
     click_link 'Sign In'
+    fill_in 'Email', with: user.email
+    fill_in 'Password', with: user.password
+    click_button 'Sign In'
     click_link 'My Account'
 
-    fill_in 'Password' with: 'newPassword1'
-    fill_in 'Password confirmation' with: 'newPassword1'
+    fill_in 'Password', with: 'newPassword1'
+    fill_in 'Password confirmation', with: 'newPassword1'
+    fill_in 'Current password', with: user.password
     click_button 'Update'
 
-    expect(page).to have_content('Your password has been changed successfully.')
+    expect(page).to have_content('Your account has been updated successfully.')
   end
 
   scenario 'user does not confirm new password' do
     user = FactoryBot.create(:user)
     visit root_path
     click_link 'Sign In'
+    fill_in 'Email', with: user.email
+    fill_in 'Password', with: user.password
+    click_button 'Sign In'
     click_link 'My Account'
 
-    fill_in 'Password' with: 'newPassword1'
-    fill_in 'Password confirmation' with: ''
+    fill_in 'Password', with: 'newPassword1'
+    fill_in 'Password confirmation', with: ''
+    fill_in 'Current password', with: user.password
     click_button 'Update'
 
-    expect(page).to have_content('Please fill out all forms.')
+    expect(page).to have_content("Password confirmation can't be blank")
   end
 end
