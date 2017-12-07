@@ -5,7 +5,6 @@ class GoalsController < ApplicationController
 
   def new
     @goal = Goal.new
-
   end
 
   def create
@@ -32,6 +31,11 @@ class GoalsController < ApplicationController
       flash[:alert] = "Goal not updated"
       render :edit
     end
+
+    def show
+      @goal = Goal.find(params[:id])
+      @task = Task.where(goal_id = @goal)
+    end
   end
 
   private
@@ -43,5 +47,5 @@ class GoalsController < ApplicationController
       :obstacle
     )
   end
-  
+
 end
